@@ -55,12 +55,20 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "/home/ivan/.script/wm/dmenu", NULL };
-static const char *termcmd[]  = { "urxvt", NULL };
+static const char *term[] = { "urxvt", NULL };
+static const char *firefox[] = { "firefox", NULL };
+static const char *vifm[] = { "urxvt", "-e", "vifm", NULL };
+static const char *pmn[] = { "urxvt", "-e", "pmn", NULL };
+static const char *pavucontrol[] = { "pavucontrol", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_Return, spawn,          {.v = term } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_c,      spawn,          {.v = firefox } },
+	{ MODKEY,                       XK_n,      spawn,          {.v = vifm } },
+	{ MODKEY,                       XK_m,      spawn,          {.v = pmn } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = pavucontrol } },
 
 	{ MODKEY,                       XK_l,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = -1 } },
@@ -74,7 +82,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
 
 	{ MODKEY,                       XK_period, togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
