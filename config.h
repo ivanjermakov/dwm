@@ -78,8 +78,8 @@ static Key keys[] = {
 	{ 0,                XF86XK_MonBrightnessUp,    spawn,          SHCMD("~/.script/wm/brightness-up") },
 	{ 0,                XF86XK_MonBrightnessDown,  spawn,          SHCMD("~/.script/wm/brightness-down") },
 
-	{ MODKEY,           XK_i,                      focusstack,     {.i = +1 } },
-	{ MODKEY,           XK_k,                      focusstack,     {.i = -1 } },
+	{ MODKEY,           XK_k,                      focusstack,     {.i = +1 } },
+	{ MODKEY,           XK_i,                      focusstack,     {.i = -1 } },
 
 	{ MODKEY|ShiftMask, XK_j,                      setmfact,       {.f = -0.05} },
 	{ MODKEY|ShiftMask, XK_l,                      setmfact,       {.f = +0.05} },
