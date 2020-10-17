@@ -100,7 +100,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask, XK_comma,                  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask, XK_period,                 tagmon,         {.i = +1 } },
 
-	{ MODKEY,           XK_Escape,                 view,           {.ui = 1 << 99} },
+	{ MODKEY,           XK_Escape,                 view,           {.ui = 1 << 9} },
 
 	TAGKEYS(            XK_1,                                      0)
 	TAGKEYS(            XK_2,                                      1)
