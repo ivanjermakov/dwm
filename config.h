@@ -80,6 +80,7 @@ static Key keys[] = {
 
 	{ MODKEY,           XK_k,                      focusstack,     {.i = +1 } },
 	{ MODKEY,           XK_i,                      focusstack,     {.i = -1 } },
+	{ MODKEY,           XK_semicolon,              focusstack,     {.i = 0  } },
 
 	{ MODKEY|ShiftMask, XK_j,                      setmfact,       {.f = -0.05} },
 	{ MODKEY|ShiftMask, XK_l,                      setmfact,       {.f = +0.05} },
