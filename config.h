@@ -61,11 +61,11 @@ static const char *dmenucmd[] = { "/home/ivan/.script/wm/dmenu", NULL };
 
 static Key keys[] = {
 	/* modifier         key                        function        argument */
-	{ MODKEY,           XK_Return,                 spawn,          SHCMD("urxvt") },
+	{ MODKEY,           XK_Return,                 spawn,          SHCMD("st") },
 	{ MODKEY,           XK_d,                      spawn,          SHCMD("~/.script/wm/dmenu") },
 	{ MODKEY,           XK_c,                      spawn,          SHCMD("firefox") },
-	{ MODKEY,           XK_n,                      spawn,          SHCMD("urxvt -e vifm") },
-	{ MODKEY,           XK_m,                      spawn,          SHCMD("urxvt -e pmn") },
+	{ MODKEY,           XK_n,                      spawn,          SHCMD("st vifm") },
+	{ MODKEY,           XK_m,                      spawn,          SHCMD("st pmn") },
 	{ MODKEY,           XK_p,                      spawn,          SHCMD("pavucontrol") },
 	{ MODKEY,           XK_a,                      spawn,          SHCMD("~/.script/audio t") },
 	{ MODKEY,           XK_space,                  spawn,          SHCMD("~/.script/wm/toggle-layout") },
