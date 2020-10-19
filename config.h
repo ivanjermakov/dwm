@@ -62,14 +62,14 @@ static const char *dmenucmd[] = { "/home/ivan/.script/wm/dmenu", NULL };
 static Key keys[] = {
 	/* modifier         key                        function        argument */
 	{ MODKEY,           XK_Return,                 spawn,          SHCMD("st") },
-	{ MODKEY,           XK_d,                      spawn,          SHCMD("~/.script/wm/dmenu") },
 	{ MODKEY,           XK_c,                      spawn,          SHCMD("firefox") },
 	{ MODKEY,           XK_n,                      spawn,          SHCMD("st vifm") },
 	{ MODKEY,           XK_m,                      spawn,          SHCMD("st pmn") },
 	{ MODKEY,           XK_p,                      spawn,          SHCMD("pavucontrol") },
-	{ MODKEY,           XK_a,                      spawn,          SHCMD("~/.script/audio t") },
-	{ MODKEY,           XK_space,                  spawn,          SHCMD("~/.script/wm/toggle-layout") },
 	{ MODKEY|ShiftMask, XK_Escape,                 spawn,          SHCMD("~/.script/system/suspend") },
+	{ MODKEY,           XK_d,                      spawn,          SHCMD("~/.script/wm/dmenu") },
+	{ MODKEY,           XK_a,                      spawn,          SHCMD("~/.script/wm/toggle-audio") },
+	{ MODKEY,           XK_space,                  spawn,          SHCMD("~/.script/wm/toggle-layout") },
 	{ 0,                XF86XK_AudioRaiseVolume,   spawn,          SHCMD("~/.script/wm/volume-up") },
 	{ 0,                XF86XK_AudioLowerVolume,   spawn,          SHCMD("~/.script/wm/volume-down") },
 	{ 0,                XF86XK_AudioMute,          spawn,          SHCMD("~/.script/wm/volume-mute") },
