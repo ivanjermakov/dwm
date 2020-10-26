@@ -67,6 +67,7 @@ static Key keys[] = {
 	{ MODKEY,           XK_m,                      spawn,          SHCMD("st pmn") },
 	{ MODKEY,           XK_p,                      spawn,          SHCMD("pavucontrol") },
 	{ MODKEY|ShiftMask, XK_Escape,                 spawn,          SHCMD("~/.script/system/suspend") },
+	{ 0,                XF86XK_PowerOff,           spawn,          SHCMD("~/.script/system/suspend") },
 	{ MODKEY,           XK_d,                      spawn,          SHCMD("~/.script/wm/dmenu") },
 	{ MODKEY,           XK_a,                      spawn,          SHCMD("~/.script/wm/toggle-audio") },
 	{ MODKEY,           XK_space,                  spawn,          SHCMD("~/.script/wm/toggle-layout") },
@@ -101,8 +102,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask, XK_comma,                  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask, XK_period,                 tagmon,         {.i = +1 } },
 
-	{ MODKEY,           XK_Escape,                 view,           {.ui = 1 << 9} },
-
 	TAGKEYS(            XK_1,                                      0)
 	TAGKEYS(            XK_2,                                      1)
 	TAGKEYS(            XK_3,                                      2)
@@ -112,6 +111,7 @@ static Key keys[] = {
 	TAGKEYS(            XK_7,                                      6)
 	TAGKEYS(            XK_8,                                      7)
 	TAGKEYS(            XK_9,                                      8)
+	TAGKEYS(            XK_Escape,                                 8)
 };
 
 /* button definitions */
