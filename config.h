@@ -111,7 +111,7 @@ static Key keys[] = {
 	TAGKEYS(            XK_7,                                      6)
 	TAGKEYS(            XK_8,                                      7)
 	TAGKEYS(            XK_9,                                      8)
-	TAGKEYS(            XK_Escape,                                 8)
+	{ MODKEY,           XK_Escape,      		   view,           {.ui = 1 << 8} },
 };
 
 /* button definitions */
