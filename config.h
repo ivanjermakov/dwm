@@ -6,15 +6,15 @@ static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Consolas:size=14" };
-static const char dmenufont[]       = "Consolas:size=14";
+static const char *fonts[]          = { "Hack:size=14" };
+static const char dmenufont[]       = "Hack:size=14";
 static const char col_white[]       = "#ffffff";
-static const char col_gray[]        = "#eeeeee";
+static const char col_gray[]        = "#111111";
 static const char col_black[]       = "#000000";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_white, col_white, col_gray },
-	[SchemeSel]  = { col_white, col_white, col_black},
+	[SchemeNorm] = { col_black, col_black, col_gray },
+	[SchemeSel]  = { col_black, col_black, col_white},
 };
 
 /* tagging */
@@ -61,11 +61,12 @@ static const char *dmenucmd[] = { "/home/ivan/.script/wm/dmenu", NULL };
 
 static Key keys[] = {
 	/* modifier         key                        function        argument */
-	{ MODKEY,           XK_Return,                 spawn,          SHCMD("st") },
+	{ MODKEY,           XK_Return,                 spawn,          SHCMD("~/.script/wm/st") },
 	{ MODKEY,           XK_c,                      spawn,          SHCMD("firefox") },
-	{ MODKEY,           XK_n,                      spawn,          SHCMD("st vifm") },
-	{ MODKEY,           XK_m,                      spawn,          SHCMD("st pmn") },
+	{ MODKEY,           XK_n,                      spawn,          SHCMD("~/.script/wm/st vifm") },
+	{ MODKEY,           XK_m,                      spawn,          SHCMD("~/.script/wm/st pmn") },
 	{ MODKEY,           XK_p,                      spawn,          SHCMD("pavucontrol") },
+	{ MODKEY,           XK_b,                      spawn,          SHCMD("blueberry") },
 	{ MODKEY|ShiftMask, XK_Escape,                 spawn,          SHCMD("~/.script/system/suspend") },
 	{ 0,                XF86XK_PowerOff,           spawn,          SHCMD("~/.script/system/suspend") },
 	{ MODKEY,           XK_d,                      spawn,          SHCMD("~/.script/wm/dmenu") },
@@ -78,6 +79,9 @@ static Key keys[] = {
 	{ ShiftMask,        XK_Print,                  spawn,          SHCMD("~/.script/wm/pscreen-crop") },
 	{ 0,                XF86XK_MonBrightnessUp,    spawn,          SHCMD("~/.script/wm/brightness-up") },
 	{ 0,                XF86XK_MonBrightnessDown,  spawn,          SHCMD("~/.script/wm/brightness-down") },
+	{ 0,                XF86XK_AudioPrev,		   spawn,          SHCMD("~/.script/wm/audio-prev") },
+	{ 0,                XF86XK_AudioPlay,		   spawn,          SHCMD("~/.script/wm/audio-play") },
+	{ 0,                XF86XK_AudioNext,		   spawn,          SHCMD("~/.script/wm/audio-next") },
 
 	{ MODKEY,           XK_k,                      focusstack,     {.i = +1 } },
 	{ MODKEY,           XK_i,                      focusstack,     {.i = -1 } },
