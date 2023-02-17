@@ -61,10 +61,11 @@ static const char *dmenucmd[] = { "/home/ivan/.script/wm/dmenu", NULL };
 
 static Key keys[] = {
 	/* modifier         key                        function        argument */
-	{ MODKEY,           XK_Return,                 spawn,          SHCMD("~/.script/wm/st") },
-	{ MODKEY,           XK_c,                      spawn,          SHCMD("firefox") },
-	{ MODKEY,           XK_n,                      spawn,          SHCMD("~/.script/wm/st vifm") },
-	{ MODKEY,           XK_m,                      spawn,          SHCMD("~/.script/wm/st pmn") },
+	{ MODKEY,           XK_Return,                 spawn,          SHCMD("~/.script/wm/term") },
+	{ MODKEY,           XK_c,                      spawn,          SHCMD("google-chrome-stable") },
+	{ MODKEY,           XK_q,                      spawn,          SHCMD("qutebrowser") },
+	{ MODKEY,           XK_n,                      spawn,          SHCMD("~/.script/wm/term -e ~/.script/vifmrun") },
+	{ MODKEY,           XK_m,                      spawn,          SHCMD("~/.script/wm/term -e pmn") },
 	{ MODKEY,           XK_p,                      spawn,          SHCMD("pavucontrol") },
 	{ MODKEY,           XK_b,                      spawn,          SHCMD("blueberry") },
 	{ MODKEY|ShiftMask, XK_Escape,                 spawn,          SHCMD("~/.script/system/suspend") },
