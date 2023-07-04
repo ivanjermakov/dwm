@@ -37,9 +37,10 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "[]=",      tile    }, /* first entry is default */
+    { "TTT",	  bstack  },
 	{ "[M]",      monocle },
+	{ "><>",      NULL    }, /* no layout function means floating behavior */
 };
 
 /* key definitions */
@@ -62,8 +63,8 @@ static const char *dmenucmd[] = { "/home/ivan/.script/wm/dmenu", NULL };
 static Key keys[] = {
 	/* modifier         key                        function        argument */
 	{ MODKEY,           XK_Return,                 spawn,          SHCMD("~/.script/wm/term") },
-	{ MODKEY,           XK_c,                      spawn,          SHCMD("google-chrome-stable") },
-	{ MODKEY,           XK_q,                      spawn,          SHCMD("qutebrowser") },
+	{ MODKEY,           XK_g,                      spawn,          SHCMD("google-chrome-stable --profile-directory=Default") },
+	{ MODKEY,           XK_c,                      spawn,          SHCMD("firefox") },
 	{ MODKEY,           XK_n,                      spawn,          SHCMD("~/.script/wm/term -e ~/.script/vifmrun") },
 	{ MODKEY,           XK_m,                      spawn,          SHCMD("~/.script/wm/term -e pmn") },
 	{ MODKEY,           XK_p,                      spawn,          SHCMD("pavucontrol") },
@@ -98,6 +99,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask, XK_e,                      quit,           {0} },
 
 	{ MODKEY,           XK_t,                      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY|ShiftMask, XK_t,                      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,           XK_f,                      setlayout,      {.v = &layouts[2]} },
 
 	{ MODKEY,           XK_period,                 togglefloating, {0} },
