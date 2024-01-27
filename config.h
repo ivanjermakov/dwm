@@ -84,6 +84,8 @@ static Key keys[] = {
 	{ 0,                XF86XK_AudioPrev,		   spawn,          SHCMD("~/.script/wm/audio-prev") },
 	{ 0,                XF86XK_AudioPlay,		   spawn,          SHCMD("~/.script/wm/audio-play") },
 	{ 0,                XF86XK_AudioNext,		   spawn,          SHCMD("~/.script/wm/audio-next") },
+	{ MODKEY|ShiftMask, XK_a,                      spawn,          SHCMD("~/.script/audio a") },
+	{ MODKEY|ShiftMask, XK_h,                      spawn,          SHCMD("~/.script/audio h") },
 
 	{ MODKEY,           XK_k,                      focusstack,     {.i = +1 } },
 	{ MODKEY,           XK_i,                      focusstack,     {.i = -1 } },
